@@ -2,5 +2,15 @@
 plugins {
     id 'com.android.application' version '7.3.1' apply false
     id 'com.android.library' version '7.3.1' apply false
+    id("com.google.dagger.hilt.android") version "2.44" apply false
+    id 'dagger.hilt.android.plugin'
+
+}
+
+buildscript {
+    ext.hilt_version = '2.40'
+    dependencies {
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+    }
 }
 
